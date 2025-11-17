@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gamers Republic — {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      /* inline quick tweaks for header */
+      .user-info {
+        font-size: 15px;
+        color: #c7d5e0;
+      }
+      .user-info a {
+        color: #00b4d8;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .user-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="logo">
+          🎮
+        </div>
+        <div>
+          <h2 style="margin:0;font-weight:700;letter-spacing:0.5px;">Gamers Republic</h2>
+          <div class="meta" style="margin-top:4px;font-size:14px;color:#9bb3c8;">Where all gamers unite</div>
+        </div>
+      </div>
+      <div>
+        {% if session.user %}
+        <span class="user-info">Signed in as <strong>{{ session.user }}</strong> •
+          <a href="{{ url_for('logout') }}">Logout</a>
+        </span>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="footer">Made with care • Local demo</div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <!-- Global Plotly Loader -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  </body>
+</html>

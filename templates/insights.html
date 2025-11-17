@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="discover-wrapper">
+    <div class="discover-container">
+
+        <h2 class="page-title">{{ game.Title }}</h2>
+
+        <p class="game-description">
+            {{ game["Game Description"] }}
+        </p>
+
+        <p class="info-note">
+            The following visual insights represent global trends across all games.
+        </p>
+
+        <div class="insights-grid">
+
+            <div class="insight-card">
+                <h3>Top Developers</h3>
+                {{ dev_plot|safe }}
+            </div>
+
+            <div class="insight-card">
+                <h3>Release Year Distribution</h3>
+                {{ year_plot|safe }}
+            </div>
+
+            <div class="insight-card">
+                <h3>Common Words in Descriptions</h3>
+                {{ words_plot|safe }}
+            </div>
+
+            <div class="insight-card">
+                <h3>Most Frequent Genres</h3>
+                {{ genre_plot|safe }}
+            </div>
+
+            <div class="insight-card">
+                <h3>Most Supported Languages</h3>
+                {{ lang_plot|safe }}
+            </div>
+
+        </div>
+
+        <br>
+        <a href="/discover" class="login-btn" style="background:#9333EA;width:150px;">Back</a>
+
+    </div>
+</div>
+
+{% endblock %}

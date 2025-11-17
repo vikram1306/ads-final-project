@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Discover Games{% endblock %}
+{% block content %}
+
+<div class="discover-wrapper">
+  <div class="shape circle"></div>
+  <div class="shape triangle"></div>
+  <div class="shape square"></div>
+  <div class="shape circle"></div>
+
+  <div class="discover-container">
+    <h1 class="page-title">Discover Games</h1>
+    <p class="page-subtitle">
+      Find your next favorite game and explore insights 🚀
+    </p>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <div class="row">
+        <input
+          type="text"
+          id="gameInput"
+          placeholder="Type a game title (press Enter)..."
+          autocomplete="off"
+        />
+        <button id="searchBtn" class="search-btn">Search</button>
+      </div>
+
+      <ul id="suggestions" class="suggestions-list"></ul>
+      <div id="searchTag" class="search-tag" aria-live="polite" style="display:none;"></div>
+    </div>
+
+    <!-- Game Info -->
+    <div id="gameInfo" class="results-section"></div>
+
+    <!-- Recommendations -->
+    <h3 id="recommendationTitle" style="display:none;margin-top:40px;">Recommended Games</h3>
+    <div id="recommendations" class="recommendations"></div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<div class="login-wrapper">
+  <div class="shape circle"></div>
+  <div class="shape triangle"></div>
+  <div class="shape square"></div>
+  <div class="shape circle"></div>
+
+  <div class="login-card">
+    <div class="login-header">
+      <div class="login-icon">🎮</div>
+      <h2>Welcome Back</h2>
+      <p class="login-subtitle">Sign in to explore amazing games</p>
+    </div>
+
+    {% if error %}
+    <p style="color:#ff7070;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <div class="demo-info">
+      Demo credentials: <strong>demo / demo</strong>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
