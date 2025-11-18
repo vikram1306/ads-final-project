@@ -93,6 +93,10 @@ INSIGHTS PAGE:
 
 <img width="1898" height="881" alt="image" src="https://github.com/user-attachments/assets/c44ee78a-356a-4c93-82a8-8798d41f122e" />
 
+STEAM LINKED PAGE:
+
+<img width="1918" height="872" alt="image" src="https://github.com/user-attachments/assets/93675d41-ae60-4544-86ae-f7c961472aca" />
+
 
 Useful links & references
 -------------------------
